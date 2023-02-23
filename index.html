@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple use page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SimplePage</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                </ul>
+                <form class="d-flex align-items-center">
+                    <span class="adminName">hello <span id="name"></span></span>
+                    <a href="./login.html" class="btn btn-outline-success loginBtn" type="submit">Login</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/pic1.jpg" class="d-block w-100" alt="...">
+
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/pic2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/pic3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <p style="text-align:center ; font-size:30px">click</p>
+
+    <div class="boxData">
+
+
+    </div>
+
+   
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5>基本資料</h5>
+              <button id="btnClose" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- <div>name:</div>
+              <div>age:</div>
+              <div>tel:</div> -->
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'
+        integrity='sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=='
+        crossorigin='anonymous'></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
+    <script src="/all.js"></script>
+    <script>
+        var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+  keyboard: false
+})
+        let str = '';
+        const staffData = [
+            { id: 'technine_01', name: 'Staff 01', age: '31', tel: "+852-12345678" },
+            { id: 'technine_02', name: 'Staff 02', age: '21', tel: "+852-00000000" },
+            { id: 'technine_03', name: 'Staff 03', age: '22', tel: "+852-11111111" },
+            { id: 'technine_04', name: 'Staff 04', age: '23', tel: "+852-22222222" },
+            { id: 'technine_05', name: 'Staff 05', age: '46', tel: "+852-44444444" },
+            { id: 'technine_06', name: 'Staff 06', age: '27', tel: "+852-33333333" },
+            { id: 'technine_08', name: 'Staff 07', age: '34', tel: "+852-55555555" },
+            { id: 'technine_09', name: 'Staff 07', age: '34', tel: "+852-66666666" },
+            { id: 'technine_10', name: 'Staff 07', age: '34', tel: "+852-77777777" },
+        ];
+
+
+        for (item in staffData) {
+            console.log(item);
+            str = `
+            <div  class="items" data-kkbox="${item}">
+                <h1>${staffData[item].name}</h1>
+            </div>
+            `
+            $('.boxData').append(str)
+        }
+
+
+        $('.items').on('click', (e) => {
+            let strData = ''
+            e.currentTarget.disabled = true;
+            let userid = e.currentTarget.dataset.kkbox;
+
+            console.log(userid);
+
+            strData = `
+              <div>name:${staffData[userid].name}</div>
+              <div>age:${staffData[userid].age}</div>
+              <div>tel:${staffData[userid].tel}</div>
+            `
+            console.log(strData);
+            $('.modal-body').append(strData)
+            myModal.show()
+        })
+
+
+        
+        $('#btnClose , .modal ').click(()=>{
+            $('.modal-body div').remove();
+            myModal.hide()
+        })
+
+
+    </script>
+</body>
+
+</html>
